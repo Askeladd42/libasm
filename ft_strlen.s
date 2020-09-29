@@ -10,3 +10,26 @@
 #                                                                              #
 # **************************************************************************** #
 
+section.data
+
+	global: _ft_strlen
+	global: s
+
+s:
+	db	"Salut les gens"
+
+i:
+	db	0
+
+section.text
+	global _start
+
+_start:
+	_size_t	ft_strlen
+
+	mov eax, 0
+	jmp	edx
+	mov eax, edx
+
+
+	ret;

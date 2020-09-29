@@ -10,3 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
+section.data
+
+	global: 	_ft_read
+
+section.text
+	global _start
+
+_start
+	_ssize_t	ft_read

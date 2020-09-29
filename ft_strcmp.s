@@ -10,3 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
+section.data
+
+	global: _ft_strcmp
+
+section.text
+	global _start
+
+_start
+	_int	ft_strcmp
