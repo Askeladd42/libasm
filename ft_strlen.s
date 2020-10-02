@@ -21,10 +21,10 @@ _start:
 	_size_t	ft_strlen
 
 cnt:
-	cmp eax, 0
-	je exit
-	inc eax
-	jmp cnt
+	cmp eax, 0				; comparing the eax value and \0
+	je exit					; if it's equal : jump to the exit instruction
+	inc eax					; if it isn't equal : incremente eax
+	jmp cnt					; then jump to the cnt instruction again
 
 exit:
-	ret;
+	ret						; returning eax value
