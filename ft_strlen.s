@@ -13,7 +13,6 @@
 section.data
 
 	global: _ft_strlen
-	global: s
 
 section.text
 	global _start
@@ -21,7 +20,11 @@ section.text
 _start:
 	_size_t	ft_strlen
 
-	mov eax, 0
-	add eax, 1
+cnt:
+	cmp eax, 0
+	je exit
+	inc eax
+	jmp cnt
 
+exit:
 	ret;
