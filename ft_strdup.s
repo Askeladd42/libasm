@@ -10,3 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
+section.data
+
+	global: _ft_strdup
+
+section.text
+	global _start
+
+_start
+	_ft_strdup
