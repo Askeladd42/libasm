@@ -6,16 +6,13 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/01/19 14:13:55 by plam             ###   ########.fr        #
+#    Updated: 2021/01/19 14:42:03 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC			=	ft_strlen.s\
-				ft_strcpy.s\
-				ft_strcmp.s\
-				ft_write.s\
-				ft_read.s\
-				ft_strdup.s\
+SRC			=	ft_strlen.s ft_read.s\
+				ft_strcpy.s ft_write.s\
+				ft_strcmp.s ft_strdup.s\
 
 NAME		= 	libasm.a
 
@@ -27,12 +24,16 @@ FLAGS		= 	-felf64
 
 RM			= 	/bin/rm -f
 
+CC			= 	/bin/clang
+
+FLAGS		= 	-Wall -Wextra -Werror
+
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			$(ASM) $(FLAGS) $(OBJS) $(NAME)
 
-ex:
+test:
 			clang main.c $(NAME) -o test && ./test
 
 clean:
@@ -43,4 +44,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re ex bonus
+.PHONY:		all clean fclean re test bonus
