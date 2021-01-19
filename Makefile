@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/01/19 13:42:06 by plam             ###   ########.fr        #
+#    Updated: 2021/01/19 14:13:55 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,9 +36,10 @@ ex:
 			clang main.c $(NAME) -o test && ./test
 
 clean:
-			$(RM) $(NAME)
+			$(RM) $(OBJS)
 
 fclean:		clean
+			$(RM) $(NAME)
 
 re:			fclean all
 
