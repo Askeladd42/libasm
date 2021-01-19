@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2020/09/29 11:02:55 by plam             ###   ########.fr        #
+#    Updated: 2021/01/19 13:42:06 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ OBJS		= 	${SRC:.s=.o}
 
 ASM			= 	nasm
 
-FLAGS		= 	-f elf64
+FLAGS		= 	-felf64
 
 RM			= 	/bin/rm -f
 
@@ -31,7 +31,10 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			$(ASM) $(FLAGS) $(OBJS) $(NAME)
-	
+
+ex:
+			clang main.c $(NAME) -o test && ./test
+
 clean:
 			$(RM) $(NAME)
 
@@ -39,4 +42,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re ex bonus
