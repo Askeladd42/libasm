@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/01/19 14:42:03 by plam             ###   ########.fr        #
+#    Updated: 2021/01/19 14:43:28 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ RM			= 	/bin/rm -f
 
 CC			= 	/bin/clang
 
-FLAGS		= 	-Wall -Wextra -Werror
+CFLAGS		= 	-Wall -Wextra -Werror
 
 all:		$(NAME)
 
@@ -34,7 +34,7 @@ $(NAME):	$(OBJS)
 			$(ASM) $(FLAGS) $(OBJS) $(NAME)
 
 test:
-			clang main.c $(NAME) -o test && ./test
+			$(CC) $(CFLAGS) main.c $(NAME) -o test && ./test
 
 clean:
 			$(RM) $(OBJS)
