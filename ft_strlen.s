@@ -12,15 +12,9 @@
 
 section.data
 
-	global: _ft_strlen
+	global: ft_strlen
 
-section.text
-	global _start
-
-_start:
-	_size_t	ft_strlen
-
-cnt:
+ft_strlen:
 	cmp eax, 0				; comparing the eax value and \0
 	je exit					; if it's equal : jump to the exit instruction
 	inc eax					; if it isn't equal : incremente eax

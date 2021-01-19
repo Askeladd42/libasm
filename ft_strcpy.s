@@ -18,4 +18,5 @@ section.text
 	global _start
 
 _start
-	_ft_strcpy
+	char	*ft_strcpy(char *dst,const char *src)
+	
