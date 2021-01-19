@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/19 15:18:56 by plam             ###   ########.fr       */
+/*   Updated: 2021/01/19 15:46:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_len(void)
 	printf("mine = |%zd|\n", ft_strlen("the\0hidden"));
 	printf("real = |%zd|\n", strlen("the\0hidden"));
 	printf("mine = |%zd|\n", ft_strlen("Lorem \bipsum\vdollar"));
-	printf("real = |%zd|\n", strlen("Lorem \bipsum\vdolor"));
+	printf("real = |%zd|\n", strlen("Lorem \bipsum\vdollar"));
 	printf("------------------------------\n\n");
 }
 /*

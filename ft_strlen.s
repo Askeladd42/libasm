@@ -10,14 +10,17 @@
 #                                                                              #
 # **************************************************************************** #
 
-global: ft_strlen
-section .text
+	section	.text
+	global	ft_strlen
 
-ft_strlen:
-	cmp	eax, 0				; comparing the eax value and \0
-	je	exit				; if it's equal : jump to the exit instruction
-	inc	eax					; if it isn't equal : incremente eax
-	jmp	cnt					; then jump to the cnt instruction again
+	ft_strlen:
+		xor	rax, rax			; set rax = 0;
 
-exit:
-	ret						; returning eax value
+	cnt:
+		cmp	byte[rdi + rax], 0	; comparing the rax value and \0
+		jz	exit				; if it's equal : jump to the exit instruction
+		inc	rax					; if it isn't equal : incremente rax
+		jmp	cnt					; then jump to the cnt instruction again
+
+	exit:
+		ret						; returning rax value
