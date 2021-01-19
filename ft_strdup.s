@@ -12,10 +12,13 @@
 
 section.data
 
-	global: _ft_strdup
+	global: ft_strdup
 
 section.text
+	extern ft_strlen
+	extern ft_strcpy
+	extern malloc
 	global _start
 
 _start
-	_ft_strdup
+	ft_strdup

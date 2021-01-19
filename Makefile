@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/01/19 14:43:28 by plam             ###   ########.fr        #
+#    Updated: 2021/01/19 14:53:22 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ RM			= 	/bin/rm -f
 
 CC			= 	/bin/clang
 
-CFLAGS		= 	-Wall -Wextra -Werror
+CFLAGS		= 	-L -lasm
 
 all:		$(NAME)
 
