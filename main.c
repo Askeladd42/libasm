@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2020/10/02 11:21:39 by plam             ###   ########.fr       */
+/*   Updated: 2021/01/19 15:18:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_len(void)
 	printf("real = |%zd|\n", strlen("Lorem \bipsum\vdolor"));
 	printf("------------------------------\n\n");
 }
-
+/*
 void	ft_cmp(void)
 {
 	printf("-----------FT_STRCMP----------\n");
@@ -90,14 +90,14 @@ void	ft__write(void)
 	printf("real = %ld errno = %d\n", write(fd, "welcome hi", 9), errno);
 	printf("------------------------------\n\n");
 }
-
+*/
 int		main(void)
 {
 	ft_len();
-	ft_cmp();
+/*	ft_cmp();
 	ft__write();
 	ft__read();
 	ft_cpy();
-	ft_dup();
+	ft_dup();*/
 	return (0);
 }

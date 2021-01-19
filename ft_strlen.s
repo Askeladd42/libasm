@@ -10,15 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-section.data
-
-	global: ft_strlen
+global: ft_strlen
+section .text
 
 ft_strlen:
-	cmp eax, 0				; comparing the eax value and \0
-	je exit					; if it's equal : jump to the exit instruction
-	inc eax					; if it isn't equal : incremente eax
-	jmp cnt					; then jump to the cnt instruction again
+	cmp	eax, 0				; comparing the eax value and \0
+	je	exit				; if it's equal : jump to the exit instruction
+	inc	eax					; if it isn't equal : incremente eax
+	jmp	cnt					; then jump to the cnt instruction again
 
 exit:
 	ret						; returning eax value
