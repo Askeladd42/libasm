@@ -37,5 +37,6 @@ ret_y:		xor	cl, cl
 ret_dif:	ja	ret_p
 			mov rax, -1
 			ret
+			
 ret_p:		mov rax, 1
 			ret
