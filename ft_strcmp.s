@@ -10,12 +10,28 @@
 #                                                                              #
 # **************************************************************************** #
 
-section.data
-
-	global: _ft_strcmp
+global _ft_strcmp
 
 section.text
-	global _start
+ft_strcmp:	xor	rax, rax
+			jmp	chk_dst
 
-_start
-	_int	ft_strcmp
+loop:		mov	rcx, byte[rsi + rax]
+			cmp	byte[rdi + rax], rcx
+			jne	ret_n
+			inc	rax
+			jmp	chk_dst
+
+chk_dst:	cmp	byte[rdi + rax], 0
+			je	chk_src
+			jmp	loop
+
+chk_src:	cmp	byte[rsi + rax], 0
+			je	ret_y
+			jmp	loop
+
+ret_y:		xor	rax, rax
+			ret
+
+ret_n:		mov rax, -1
+			ret
