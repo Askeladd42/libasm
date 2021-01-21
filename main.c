@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/21 12:42:47 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/21 15:40:32 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@
 	printf("real = |%zd|\n", strlen("Lorem \bipsum\vdollar"));
 	printf("------------------------------\n\n");
 }
-*/
 
 void	ft_cmp(void)
 {
@@ -64,6 +63,35 @@ void	ft_cmp(void)
 				"asdklfjasdfj////asdf'''asdf3##"));
 	printf("------------------------------\n\n");
 }
+*/
+void	ft_cpy(void)
+{
+	printf("-----------FT_STRCPY----------\n");
+	printf("mine = |%s|\n", ft_strcpy("hell", "hello"));
+	printf("real = |%s|\n", strcpy("hell", "hello"));
+	printf("mine = |%s|\n", ft_strcpy("hello", "HELLA"));
+	printf("real = |%s|\n", strcpy("hello", "HELLA"));
+	printf("mine = |%s|\n", ft_strcpy("hello_world !", "Bonjour le monde !"));
+	printf("real = |%s|\n", strcpy("hello_world !", "Bonjour le monde !"));
+	printf("mine = |%s|\n", ft_strcpy("stayathome", "#restezchezvous"));
+	printf("real = |%s|\n", strcpy("#stayathome", "#resterchezvous"));
+	printf("mine = |%s|\n", ft_strcpy("Hi", "Hi"));
+	printf("real = |%s|\n", strcpy("HI", "HI"));
+	printf("mine = |%s|\n", ft_strcpy("#42atom", "#42aAISON"));
+	printf("real = |%s|\n", strcpy("#42atom", "#42MAISON"));
+	printf("mine = |%s|\n", ft_strcpy("", "vide"));
+	printf("real = |%s|\n", strcpy("", "vide"));
+	printf("mine = |%s|\n", ft_strcpy("\n", "rien"));
+	printf("real = |%s|\n", strcpy("\n", "rien"));
+	printf("mine = |%s|\n", ft_strcpy("the\0hidden", "thehidden"));
+	printf("real = |%s|\n", strcpy("the\0hidden", "thehidden"));
+	printf("mine = |%s|\n", ft_strcpy("asdklfjasdfj////asdf'''asdf3##",
+				"asdklfjasdfj////asdf'''asdf3##"));
+	printf("real = |%s|\n", strcpy("asdklfjasdfj////asdf'''asdf3##",
+				"asdklfjasdfj////asdf'''asdf3##"));
+	printf("------------------------------\n\n");
+}
+
 /*
 void	ft__write(void)
 {
@@ -92,13 +120,14 @@ void	ft__write(void)
 	printf("------------------------------\n\n");
 }
 */
+
 int		main(void)
 {
 	//ft_len();
-	ft_cmp();
-/*	ft__write();
-	ft__read();
+	//ft_cmp();
+	//ft__write();
+	//ft__read();
 	ft_cpy();
-	ft_dup();*/
+	//ft_dup();
 	return (0);
 }

@@ -10,13 +10,24 @@
 #                                                                              #
 # **************************************************************************** #
 
-section.data
+global	ft_strcpy
 
-	global: _ft_strcpy
+section	.text
 
-section.text
-	global _start
+ft_strcpy:	push	rcx
+			xor		rax, rax
+			jmp		chk_dst
 
-_start
-	char	*ft_strcpy(char *dst,const char *src)
-	
+loop:		mov	cl, byte[rsi + rax]
+			mov	byte[rdi + rax], cl
+			inc rax
+			jmp chk_dst
+
+chk_dst:	cmp	byte[rsi + rax], 0
+			je	ret_0
+			jmp	loop
+
+ret_0:		mov	byte[rdi +rax], 0
+			mov	rax , rdi
+			pop	rcx
+			ret
