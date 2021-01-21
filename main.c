@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/21 15:40:32 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/21 17:20:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,28 +66,38 @@ void	ft_cmp(void)
 */
 void	ft_cpy(void)
 {
+	char	str[5] = "hello";
+	/*char	str[60] = "hello_world !";
+	char	str[60] = "stayathome";
+	char	str[60] = "Hi";
+	char	str[60] = "HI";
+	char	str[60] = "";
+	char	str[60] = "\n";
+	char	str[60] = "the\0hidden";
+	char	str[128] = "asdklfjasdfj////asdf'''asdf3##";
+	*/
 	printf("-----------FT_STRCPY----------\n");
-	printf("mine = |%s|\n", ft_strcpy("hell", "hello"));
-	printf("real = |%s|\n", strcpy("hell", "hello"));
-	printf("mine = |%s|\n", ft_strcpy("hello", "HELLA"));
-	printf("real = |%s|\n", strcpy("hello", "HELLA"));
-	printf("mine = |%s|\n", ft_strcpy("hello_world !", "Bonjour le monde !"));
-	printf("real = |%s|\n", strcpy("hello_world !", "Bonjour le monde !"));
-	printf("mine = |%s|\n", ft_strcpy("stayathome", "#restezchezvous"));
-	printf("real = |%s|\n", strcpy("#stayathome", "#resterchezvous"));
-	printf("mine = |%s|\n", ft_strcpy("Hi", "Hi"));
-	printf("real = |%s|\n", strcpy("HI", "HI"));
-	printf("mine = |%s|\n", ft_strcpy("#42atom", "#42aAISON"));
-	printf("real = |%s|\n", strcpy("#42atom", "#42MAISON"));
-	printf("mine = |%s|\n", ft_strcpy("", "vide"));
-	printf("real = |%s|\n", strcpy("", "vide"));
-	printf("mine = |%s|\n", ft_strcpy("\n", "rien"));
-	printf("real = |%s|\n", strcpy("\n", "rien"));
-	printf("mine = |%s|\n", ft_strcpy("the\0hidden", "thehidden"));
-	printf("real = |%s|\n", strcpy("the\0hidden", "thehidden"));
-	printf("mine = |%s|\n", ft_strcpy("asdklfjasdfj////asdf'''asdf3##",
+	printf("mine = |%s|\n", ft_strcpy(str, "hello"));
+	printf("real = |%s|\n", strcpy(str, "hello"));
+	printf("mine = |%s|\n", ft_strcpy(str, "HELLA"));
+	printf("real = |%s|\n", strcpy(str, "HELLA"));
+	printf("mine = |%s|\n", ft_strcpy(str, "Bonjour le monde !"));
+	printf("real = |%s|\n", strcpy(str, "Bonjour le monde !"));
+	printf("mine = |%s|\n", ft_strcpy(str, "#restezchezvous"));
+	printf("real = |%s|\n", strcpy(str, "#resterchezvous"));
+	printf("mine = |%s|\n", ft_strcpy(str, "Hi"));
+	printf("real = |%s|\n", strcpy(str, "HI"));
+	printf("mine = |%s|\n", ft_strcpy(str, "#42aAISON"));
+	printf("real = |%s|\n", strcpy(str, "#42MAISON"));
+	printf("mine = |%s|\n", ft_strcpy(str, "vide"));
+	printf("real = |%s|\n", strcpy(str, "vide"));
+	printf("mine = |%s|\n", ft_strcpy(str, "rien"));
+	printf("real = |%s|\n", strcpy(str, "rien"));
+	printf("mine = |%s|\n", ft_strcpy(str, "thehidden"));
+	printf("real = |%s|\n", strcpy(str, "thehidden"));
+	printf("mine = |%s|\n", ft_strcpy(str,
 				"asdklfjasdfj////asdf'''asdf3##"));
-	printf("real = |%s|\n", strcpy("asdklfjasdfj////asdf'''asdf3##",
+	printf("real = |%s|\n", strcpy(str,
 				"asdklfjasdfj////asdf'''asdf3##"));
 	printf("------------------------------\n\n");
 }
