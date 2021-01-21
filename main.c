@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/21 12:22:27 by plam             ###   ########.fr       */
+/*   Updated: 2021/01/21 12:42:47 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libasm.h"
 
-void	ft_len(void)
+/*void	ft_len(void)
 {
 	printf("-----------FT_STRLEN----------\n");
 	printf("mine = |%zd|\n", ft_strlen("hello"));
@@ -35,6 +35,7 @@ void	ft_len(void)
 	printf("real = |%zd|\n", strlen("Lorem \bipsum\vdollar"));
 	printf("------------------------------\n\n");
 }
+*/
 
 void	ft_cmp(void)
 {
