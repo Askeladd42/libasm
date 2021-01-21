@@ -18,7 +18,8 @@ ft_strcmp:	xor rax, rax
 
 loop:		mov	cl, byte[rsi + rax]
 			cmp	byte[rdi + rax], cl
-			jne	ret_dif
+			ja	ret_p
+			jb	ret_n
 			inc	rax
 			jmp	chk_dst
 
@@ -30,13 +31,11 @@ chk_src:	cmp	byte[rsi + rax], 0
 			je	ret_y
 			jmp	loop
 
-ret_y:		xor	cl, cl
-			xor rax, rax
+ret_y:		xor rax, rax
 			ret
 
-ret_dif:	ja	ret_p
-			mov rax, -1
+ret_p:	mov rax, 1
 			ret
-			
-ret_p:		mov rax, 1
+
+ret_n:		mov rax, -1
 			ret
