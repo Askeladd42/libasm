@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/21 17:20:56 by plam             ###   ########.fr       */
+/*   Updated: 2021/01/21 17:22:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,16 @@ void	ft_cmp(void)
 */
 void	ft_cpy(void)
 {
-	char	str[5] = "hello";
-	/*char	str[60] = "hello_world !";
+	/*char	str[5] = "hello";
+	char	str[60] = "hello_world !";
 	char	str[60] = "stayathome";
 	char	str[60] = "Hi";
 	char	str[60] = "HI";
 	char	str[60] = "";
 	char	str[60] = "\n";
-	char	str[60] = "the\0hidden";
+	char	str[60] = "the\0hidden";*/
 	char	str[128] = "asdklfjasdfj////asdf'''asdf3##";
-	*/
+	
 	printf("-----------FT_STRCPY----------\n");
 	printf("mine = |%s|\n", ft_strcpy(str, "hello"));
 	printf("real = |%s|\n", strcpy(str, "hello"));
