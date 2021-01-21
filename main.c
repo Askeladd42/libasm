@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/19 15:46:56 by plam             ###   ########.fr       */
+/*   Updated: 2021/01/21 12:22:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_len(void)
 	printf("real = |%zd|\n", strlen("Lorem \bipsum\vdollar"));
 	printf("------------------------------\n\n");
 }
-/*
+
 void	ft_cmp(void)
 {
 	printf("-----------FT_STRCMP----------\n");
@@ -63,7 +63,7 @@ void	ft_cmp(void)
 				"asdklfjasdfj////asdf'''asdf3##"));
 	printf("------------------------------\n\n");
 }
-
+/*
 void	ft__write(void)
 {
 	int fd;
@@ -93,9 +93,9 @@ void	ft__write(void)
 */
 int		main(void)
 {
-	ft_len();
-/*	ft_cmp();
-	ft__write();
+	//ft_len();
+	ft_cmp();
+/*	ft__write();
 	ft__read();
 	ft_cpy();
 	ft_dup();*/
