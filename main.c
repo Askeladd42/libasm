@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/21 15:40:32 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/22 11:30:38 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_cmp(void)
 				"asdklfjasdfj////asdf'''asdf3##"));
 	printf("------------------------------\n\n");
 }
-*/
+
 void	ft_cpy(void)
 {
 	printf("-----------FT_STRCPY----------\n");
@@ -91,8 +91,8 @@ void	ft_cpy(void)
 				"asdklfjasdfj////asdf'''asdf3##"));
 	printf("------------------------------\n\n");
 }
+*/
 
-/*
 void	ft__write(void)
 {
 	int fd;
@@ -119,7 +119,6 @@ void	ft__write(void)
 	printf("real = %ld errno = %d\n", write(fd, "welcome hi", 9), errno);
 	printf("------------------------------\n\n");
 }
-*/
 
 int		main(void)
 {

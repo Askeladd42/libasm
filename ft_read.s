@@ -10,12 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-section.data
+global	ft_read
+extern	__errno_location
 
-	global: 	_ft_read
+section	.text
 
-section.text
-	global _start
-
-_start
-	_ssize_t	ft_read
+ft_read:	

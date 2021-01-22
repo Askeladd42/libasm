@@ -10,12 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-section.data
+global	ft_write
+extern	__errno_location
 
-	global: _ft_write
+section	.text
 
-section.text
-	global _start
-
-_start
-	_ft_write
+ft_write:	
