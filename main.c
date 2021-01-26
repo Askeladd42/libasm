@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/01/22 11:30:38 by user42           ###   ########.fr       */
-=======
-/*   Updated: 2021/01/21 17:22:50 by plam             ###   ########.fr       */
->>>>>>> d060908bee895665e763f0c1d2d59df199d06fbf
+/*   Updated: 2021/01/26 12:51:46 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +66,14 @@ void	ft_cmp(void)
 
 void	ft_cpy(void)
 {
-	/*char	str[5] = "hello";
+	char	str[5] = "hello";
 	char	str[60] = "hello_world !";
 	char	str[60] = "stayathome";
 	char	str[60] = "Hi";
 	char	str[60] = "HI";
 	char	str[60] = "";
 	char	str[60] = "\n";
-	char	str[60] = "the\0hidden";*/
+	char	str[60] = "the\0hidden";
 	char	str[128] = "asdklfjasdfj////asdf'''asdf3##";
 	
 	printf("-----------FT_STRCPY----------\n");
@@ -114,23 +110,23 @@ void	ft__write(void)
 	fd = 1;
 	errno = 0;
 	printf("-----------FT_WRITE-----------\n");
-	printf("mine = %ld errno = %d\n", ft_write(5000, "hello world", 11), errno);
+	printf("mine = %ld errno = %d\n", ft_write(5000, "hello world\n", 12), errno);
 	errno = 0;
-	printf("real = %ld errno = %d\n", write(5000, "hello world", 11), errno);
+	printf("real = %ld errno = %d\n", write(5000, "hello world\n", 12), errno);
 	errno = 0;
-	printf("mine = %ld errno= %d\n", ft_write(fd, "hi", 2), errno);
+	printf("mine = %ld errno= %d\n", ft_write(fd, "hi\n", 3), errno);
 	errno = 0;
-	printf("real = %ld erno = %d\n", write(fd, "hi", 2), errno);
+	printf("real = %ld erno = %d\n", write(fd, "hi\n", 3), errno);
 	errno = 0;
-	printf("mine = %ld errno = %d\n", ft_write(50000, "hola, como estas ?", 18),
+	printf("mine = %ld errno = %d\n", ft_write(50000, "hola, como estas ?\n", 19),
 			errno);
 	errno = 0;
-	printf("real = %ld errno = %d\n", write(50000, "hola, como estas ?", 18),
+	printf("real = %ld errno = %d\n", write(50000, "hola, como estas ?\n", 19),
 			errno);
 	errno = 0;
-	printf("mine = %ld errno = %d\n", ft_write(fd, "welcome hi", 9), errno);
+	printf("mine = %ld errno = %d\n", ft_write(fd, "welcome hi\n", 10), errno);
 	errno = 0;
-	printf("real = %ld errno = %d\n", write(fd, "welcome hi", 9), errno);
+	printf("real = %ld errno = %d\n", write(fd, "welcome hi\n", 10), errno);
 	printf("------------------------------\n\n");
 }
 
