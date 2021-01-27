@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/27 12:00:46 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/27 13:25:27 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,9 +137,9 @@ void	ft__read(void)
 	fd = 1;
 	errno = 0;
 	printf("-----------FT_READ-----------\n");
-	printf("mine = %ld errno = %d\n", ft_read(5000, "hello world\n", 12), errno);
+	printf("mine = %ld errno = %d\n", ft_read(5000, "Makefile", 12), errno);
 	errno = 0;
-	printf("real = %ld errno = %d\n", read(5000, "hello world\n", 12), errno);
+	printf("real = %ld errno = %d\n", read(5000, "Makefile", 12), errno);
 	errno = 0;
 	printf("------------------------------\n\n");
 }
@@ -148,8 +148,8 @@ int		main(void)
 {
 	//ft_len();
 	//ft_cmp();
-	ft__write();
-	//ft__read();
+	//ft__write();
+	ft__read();
 	//ft_cpy();
 	//ft_dup();
 	return (0);
