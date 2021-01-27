@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/01/27 11:40:43 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/27 12:00:46 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,6 @@ void	ft_cpy(void)
 				"asdklfjasdfj////asdf'''asdf3##"));
 	printf("------------------------------\n\n");
 }
-*/
 
 void	ft__write(void)
 {
@@ -127,6 +126,21 @@ void	ft__write(void)
 	printf("mine = %ld errno = %d\n", ft_write(fd, "welcome hi\n", 10), errno);
 	errno = 0;
 	printf("real = %ld errno = %d\n", write(fd, "welcome hi\n", 10), errno);
+	printf("------------------------------\n\n");
+}
+*/
+
+void	ft__read(void)
+{
+	int	fd;
+
+	fd = 1;
+	errno = 0;
+	printf("-----------FT_READ-----------\n");
+	printf("mine = %ld errno = %d\n", ft_read(5000, "hello world\n", 12), errno);
+	errno = 0;
+	printf("real = %ld errno = %d\n", read(5000, "hello world\n", 12), errno);
+	errno = 0;
 	printf("------------------------------\n\n");
 }
 
