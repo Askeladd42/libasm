@@ -10,15 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
-section.data
+global	ft_strdup
+extern	__errno_location
+extern ft_strlen
+extern ft_strcpy
+extern malloc
 
-	global: ft_strdup
+section	.text
 
-section.text
-	extern ft_strlen
-	extern ft_strcpy
-	extern malloc
-	global _start
-
-_start
-	ft_strdup
+ft_strdup:	
