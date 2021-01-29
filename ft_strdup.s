@@ -19,3 +19,5 @@ extern malloc
 section	.text
 
 ft_strdup:	
+
+free:		
