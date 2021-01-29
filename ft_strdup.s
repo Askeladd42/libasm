@@ -18,6 +18,7 @@ extern malloc
 
 section	.text
 
-ft_strdup:	
+ft_strdup:	xor	rax, rax
+			syscall
 
 free:		
