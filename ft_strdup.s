@@ -12,13 +12,11 @@
 
 section.data
 
-	global: ft_strdup
+global	ft_strdup
+extern	ft_strlen
+extern	ft_strcpy
+extern	malloc
 
-section.text
-	extern ft_strlen
-	extern ft_strcpy
-	extern malloc
-	global _start
+section	.text
 
-_start
-	ft_strdup
+ft_strdup:	push	r8
