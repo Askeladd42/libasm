@@ -10,8 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-section.data
+global	ft_strdup
+extern	__errno_location
+extern ft_strlen
+extern ft_strcpy
+extern malloc
 
+<<<<<<< HEAD
 global	ft_strdup
 extern	ft_strlen
 extern	ft_strcpy
@@ -20,3 +25,11 @@ extern	malloc
 section	.text
 
 ft_strdup:	push	r8
+=======
+section	.text
+
+ft_strdup:	xor	rax, rax
+			syscall
+
+free:		
+>>>>>>> 154de449368aa45e429205ec456ced1c329852f8
