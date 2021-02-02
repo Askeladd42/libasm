@@ -10,17 +10,16 @@
 #                                                                              #
 # **************************************************************************** #
 
-	section	.text
-	global	ft_strlen
+global	ft_strlen
+section	.text
 
-	ft_strlen:
-		xor	rax, rax			; set rax = 0
+ft_strlen:	mov	rax, rdi
+			jmp	cnt
 
-	cnt:
-		cmp	byte[rdi + rax], 0	; comparing the rax value and \0
-		jz	exit				; if it's equal : jump to the exit instruction
-		inc	rax					; if it isn't equal : incremente rax
-		jmp	cnt					; then jump to the cnt instruction again
+cnt:		cmp	byte[rax], 0	; comparing the rax value and \0
+			jz	exit			; if it's equal : jump to the exit instruction
+			inc	rax				; if it isn't equal : incremente rax
+			jmp	cnt				; then jump to the cnt instruction again
 
-	exit:
-		ret						; returning rax value
+exit:		sub	rax, rdi
+			ret					; returning rax value
