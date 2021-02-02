@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
+#    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/01/21 15:29:02 by user42           ###   ########.fr        #
+#    Updated: 2021/02/01 12:47:51 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME		= 	libasm.a
 
 OBJS		= 	${SRC:.s=.o}
 
-ASM			= 	nasm
+AS			= 	nasm
 
 FLAGS		= 	-felf64
 
@@ -31,7 +31,7 @@ CFLAGS		= 	-L -lasm
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-			$(ASM) $(FLAGS) $(OBJS) $(NAME)
+			$(AS) $(FLAGS) $(SRC) $(NAME)
 
 test:
 			$(CC) $(CFLAGS) main.c $(NAME) -o test && ./test

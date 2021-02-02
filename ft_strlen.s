@@ -14,7 +14,7 @@
 	global	ft_strlen
 
 	ft_strlen:
-		xor	rax, rax			; set rax = 0;
+		xor	rax, rax			; set rax = 0
 
 	cnt:
 		cmp	byte[rdi + rax], 0	; comparing the rax value and \0
