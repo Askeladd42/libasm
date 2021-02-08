@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/02/04 16:33:45 by plam             ###   ########.fr        #
+#    Updated: 2021/02/08 12:52:56 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,23 +14,24 @@ SRC			=	ft_strlen.s ft_read.s\
 				ft_strcpy.s ft_write.s\
 				ft_strcmp.s ft_strdup.s\
 
-NAME		= 	libasm.a
+NAME		=	libasm.a
 
-OBJS		= 	${SRC:.s=.o}
+OBJS		=	${SRC:.s=.o}
 
-AS			= 	nasm
+AS			=	nasm
 
-FLAGS		= 	-felf64
+FLAGS		=	-felf64
 
-RM			= 	/bin/rm -f
+RM			=	/bin/rm -f
 
-CC			= 	/bin/clang
+CC			=	/bin/clang
 
-CFLAGS		= 	-L -lasm
+CFLAGS		=	-L -lasm
 
 all:		$(NAME)
 
-$(NAME):	$(AS) $(FLAGS) $(SRC) 
+$(NAME):	$(OBJS)
+			$(AS) $(FLAGS) $(SRC) 
 			ar rcs $(NAME) $(OBJS)
 
 test:
