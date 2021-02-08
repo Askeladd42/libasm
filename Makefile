@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/02/08 12:52:56 by plam             ###   ########.fr        #
+#    Updated: 2021/02/08 13:00:35 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ $(NAME):	$(OBJS)
 			ar rcs $(NAME) $(OBJS)
 
 test:
-			$(CC) $(CFLAGS) main.c $(NAME) -o test && ./test
+			$(CC) $(CFLAGS) main.c $(NAME) -I libasm.h -o test && ./test
 
 clean:
 			$(RM) $(OBJS)
