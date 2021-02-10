@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/02/10 19:02:51 by plam             ###   ########.fr        #
+#    Updated: 2021/02/10 19:05:50 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,13 @@ OBJS		=	${SRC:.s=.o}
 
 AS			=	nasm
 
-CFLAGS		=	-felf64
+AFLAGS		=	-felf64
 
 RM			=	/bin/rm -f
 
 CC			=	/bin/clang
 
-DFLAGS		=	-L -lasm
+CFLAGS		=	-L -lasm
 
 all:		$(NAME)
 
