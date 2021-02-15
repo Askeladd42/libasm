@@ -32,7 +32,7 @@ ft_write:	push	r8
 
 ret_err:	neg		rax
 			mov		r8, rax
-			call	__errno_location
+			call	__errno_location wrt ..plt
 			mov		[rax], r8
 			mov		rax, -1
 			pop		r8
