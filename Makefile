@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/02/10 19:05:50 by plam             ###   ########.fr        #
+#    Updated: 2021/02/16 15:53:30 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ CFLAGS		=	-L -lasm
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-			$(AS) $(CFLAGS) $(SRC)
+			$(AS) $(AFLAGS) $(SRC)
 			ar rcs $(NAME) $(OBJS)
 
 test:
