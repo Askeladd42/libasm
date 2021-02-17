@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:22:27 by plam              #+#    #+#              #
-#    Updated: 2021/02/16 16:47:44 by plam             ###   ########.fr        #
+#    Updated: 2021/02/17 18:48:57 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,13 +28,13 @@ CC			=	/bin/clang
 
 CFLAGS		=	-L -lasm
 
-all:		$(CREATE)
-			$(NAME)
-
-$(CREATE):
+all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			ar rcs $(NAME) $(OBJS)
+
+%.o: %.s
+	$(AS) $(AFLAGS) -s $< -o $@
 
 test:
 			$(CC) $(CFLAGS) main.c $(NAME) -I libasm.h -o test && ./test
