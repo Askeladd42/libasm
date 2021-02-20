@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/02/02 12:47:09 by user42           ###   ########.fr       */
+/*   Updated: 2021/02/20 15:16:36 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libasm.h"
 
-/*void	ft_len(void)
+void	ft_len(void)
 {
 	printf("-----------FT_STRLEN----------\n");
 	printf("mine = |%zd|\n", ft_strlen("hello"));
@@ -63,7 +63,7 @@ void	ft_cmp(void)
 				"asdklfjasdfj////asdf'''asdf3##"));
 	printf("------------------------------\n\n");
 }
-
+/*
 void	ft_cpy(void)
 {
 	char	str[5] = "hello";
@@ -128,7 +128,6 @@ void	ft__write(void)
 	printf("real = %ld errno = %d\n", write(fd, "welcome hi\n", 10), errno);
 	printf("------------------------------\n\n");
 }
-*/
 
 void	ft__read(void)
 {
@@ -143,11 +142,11 @@ void	ft__read(void)
 	errno = 0;
 	printf("------------------------------\n\n");
 }
-
+*/
 int		main(void)
 {
 	ft_len();
-	//ft_cmp();
+	ft_cmp();
 	//ft__write();
 	//ft__read();
 	//ft_cpy();
