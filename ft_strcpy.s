@@ -20,8 +20,8 @@ ft_strcpy:	push	rcx
 
 loop:		mov	cl, byte[rsi + rax]
 			mov	byte[rdi + rax], cl
-			inc rax
-			jmp chk_dst
+			inc	rax
+			jmp	chk_dst
 
 chk_dst:	cmp	byte[rsi + rax], 0
 			je	ret_0

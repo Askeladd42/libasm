@@ -31,11 +31,15 @@ chk_src:	cmp	byte[rsi + rax], 0
 			je	ret_y
 			jmp	loop
 
-ret_y:		xor rax, rax
+ret_y:		xor	rax, rax
 			ret
 
-ret_p:	mov rax, 1
+ret_p:		mov		cl, byte[rdi +rax]
+			sub		cl, byte[rsi + rax]
+			movsx	rax, cl
 			ret
 
-ret_n:		mov rax, -1
+ret_n:		sub		cl, byte[rdi + rax]
+			neg		cl
+			movsx	rax, cl
 			ret
