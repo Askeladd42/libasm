@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/02/20 15:49:35 by plam             ###   ########.fr       */
+/*   Updated: 2021/02/21 14:20:18 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ void	ft_cmp(void)
 	printf("real = |%d|\n\n", strcmp("hello", "HELLA"));
 	printf("mine = |%d|\n", ft_strcmp("hello_world !", "Bonjour le monde !"));
 	printf("real = |%d|\n\n", strcmp("hello_world !", "Bonjour le monde !"));
-	printf("mine = |%d|\n", ft_strcmp("stayathome", "#restezchezvous"));
+	printf("mine = |%d|\n", ft_strcmp("#stayathome", "#restezchezvous"));
 	printf("real = |%d|\n\n", strcmp("#stayathome", "#resterchezvous"));
 	printf("mine = |%d|\n", ft_strcmp("Hi", "Hi"));
 	printf("real = |%d|\n\n", strcmp("HI", "HI"));
-	printf("mine = |%d|\n", ft_strcmp("#42atom", "#42aAISON"));
+	printf("mine = |%d|\n", ft_strcmp("#42atom", "#42MAISON"));
 	printf("real = |%d|\n\n", strcmp("#42atom", "#42MAISON"));
 	printf("mine = |%d|\n", ft_strcmp("", "vide"));
 	printf("real = |%d|\n\n", strcmp("", "vide"));
