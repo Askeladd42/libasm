@@ -20,3 +20,18 @@ section	.text
 ft_strdup:	push	r8
 			mov		r8, rdi
 			call	ft_strlen
+			pop		r8
+			inc		rax
+			mov		rdi, rax
+			push	r8
+			call 	malloc
+			pop		r8
+			mov		rsi, r8
+			mov		rdi, rax
+			push	r8
+			call 	ft_strcpy
+			pop		r8
+			mov		rax, rdi
+			mov		rdi, r8
+			pop		r8
+			ret
