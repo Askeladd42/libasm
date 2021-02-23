@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/02/24 00:55:13 by plam             ###   ########.fr       */
+/*   Updated: 2021/02/24 00:58:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,14 +133,18 @@ void	ft__read(void)
 {
 	char	buff1[1000];
 	char	buff2[1000];
+	
 	int	fd = open("./Makefile", O_RDONLY);
 	int ret1 = ft_read(fd, buff1, 1000);
 	buff2[ret1] = 0;
 	printf("-----------FT_READ-----------\n");
 	printf("mine = %ld errno = %d\n", ret1, errno);
+	close(fd);
 	errno = 0;
+	fd = open("./Makefile", O_RDONLY);
 	int	ret2 = read(fd, buff2, 1000);
 	printf("real = %ld errno = %d\n", ret2, errno);
+	close(fd);
 	errno = 0;
 	printf("------------------------------\n\n");
 }
