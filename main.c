@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/02/22 15:41:48 by plam             ###   ########.fr       */
+/*   Updated: 2021/02/23 11:19:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,12 +142,35 @@ void	ft__read(void)
 	errno = 0;
 	printf("------------------------------\n\n");
 }
-/*
+
 void	ft_dup(void)
 {
-
+	printf("-----------FT_STRDUP----------\n");
+	printf("mine = |%s|\n", ft_strdup("hello"));
+	printf("real = |%s|\n", strdup("hello"));
+	printf("mine = |%s|\n", ft_strdup("HELLA"));
+	printf("real = |%s|\n", strdup("HELLA"));
+	printf("mine = |%s|\n", ft_strdup("Bonjour le monde !"));
+	printf("real = |%s|\n", strdup("Bonjour le monde !"));
+	printf("mine = |%s|\n", ft_strdup("#restezchezvous"));
+	printf("real = |%s|\n", strdup("#resterchezvous"));
+	printf("mine = |%s|\n", ft_strdup("Hi"));
+	printf("real = |%s|\n", strdup("HI"));
+	printf("mine = |%s|\n", ft_strdup("#42aAISON"));
+	printf("real = |%s|\n", strdup("#42MAISON"));
+	printf("mine = |%s|\n", ft_strdup("vide"));
+	printf("real = |%s|\n", strdup("vide"));
+	printf("mine = |%s|\n", ft_strdup("rien"));
+	printf("real = |%s|\n", strdup("rien"));
+	printf("mine = |%s|\n", ft_strdup("thehidden"));
+	printf("real = |%s|\n", strdup("thehidden"));
+	printf("mine = |%s|\n", ft_strdup(
+				"asdklfjasdfj////asdf'''asdf3##"));
+	printf("real = |%s|\n", strdup(
+				"asdklfjasdfj////asdf'''asdf3##"));
+	printf("------------------------------\n\n");
 }
-*/
+
 int		main(void)
 {
 	ft_len();
@@ -155,6 +178,6 @@ int		main(void)
 	ft_cpy();
 	ft__write();
 	ft__read();
-	//ft_dup();
+	ft_dup();
 	return (0);
 }
