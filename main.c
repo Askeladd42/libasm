@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:32:58 by plam              #+#    #+#             */
-/*   Updated: 2021/02/25 09:47:10 by plam             ###   ########.fr       */
+/*   Updated: 2021/02/26 10:42:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	ft_cpy(void)
 
 void	ft__write(void)
 {
-	int fd;
+	int	fd;
 
 	fd = 1;
 	errno = 0;
@@ -123,9 +123,9 @@ void	ft__write(void)
 	printf("real = %ld errno = %d\n", write(50000, "hola, como estas ?\n", 19),
 			errno);
 	errno = 0;
-	printf("mine = %ld errno = %d\n", ft_write(fd, "welcome hi\n", 10), errno);
+	printf("mine = %ld errno = %d\n", ft_write(fd, "welcome hi\n", 11), errno);
 	errno = 0;
-	printf("real = %ld errno = %d\n", write(fd, "welcome hi\n", 10), errno);
+	printf("real = %ld errno = %d\n", write(fd, "welcome hi\n", 11), errno);
 	printf("------------------------------\n\n");
 }
 
